@@ -1,0 +1,13 @@
+[Unit]
+Description=Monitor Server
+After=network.target
+
+[Service]
+User=monitoruser
+WorkingDirectory=/home/monitoruser
+ExecStart=/home/monitoruser/server.py
+Restart=no
+Environment=  # Optional environment variable
+
+[Install]
+WantedBy=multi-user.target
